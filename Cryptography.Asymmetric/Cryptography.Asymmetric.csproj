@@ -11,6 +11,10 @@
         <Title>GlitchedPolygons.Services.Cryptography.Asymmetric</Title>
         <Authors>Glitched Polygons</Authors>
         <Company>Glitched Polygons</Company>
+        <PackageProjectUrl>https://github.com/GlitchedPolygons/Cryptography.Asymmetric</PackageProjectUrl>
+        <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0.txt</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/GlitchedPolygons/Cryptography.Asymmetric</RepositoryUrl>
+        <PackageTags>c# crypto cryptography lib service interface rsa key keygen encrypt decrypt sign verify string bytes data</PackageTags>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
