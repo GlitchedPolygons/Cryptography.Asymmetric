@@ -1,0 +1,16 @@
+language: csharp
+sudo: false # faster builds
+solution: ./Cryptography.Asymmetric.sln
+dist: xenial
+notifications:
+  email: false
+before_install:
+  - git lfs pull
+install:
+  - dotnet restore ./Cryptography.Asymmetric.sln
+mono: none
+dotnet: 2.2
+script:
+  - dotnet restore ./Cryptography.Asymmetric.sln
+  - cd Cryptography.Asymmetric.Tests/
+  - dotnet test

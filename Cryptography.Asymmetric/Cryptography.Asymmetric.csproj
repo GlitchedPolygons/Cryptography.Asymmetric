@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <AssemblyName>GlitchedPolygons.Services.Cryptography.Asymmetric</AssemblyName>
+        <RootNamespace>GlitchedPolygons.Services.Cryptography.Asymmetric</RootNamespace>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Product>GlitchedPolygons.Services.Cryptography.Asymmetric</Product>
+        <PackageId>GlitchedPolygons.Services.Cryptography.Asymmetric</PackageId>
+        <Description>IoC friendly C# .netstandard2.0 service interface for asymmetric cryptographic operations.</Description>
+        <Title>GlitchedPolygons.Services.Cryptography.Asymmetric</Title>
+        <Authors>Glitched Polygons</Authors>
+        <Company>Glitched Polygons</Company>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DocumentationFile>bin\Release\Cryptography.Asymmetric.xml</DocumentationFile>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <DocumentationFile>bin\Debug\Cryptography.Asymmetric.xml</DocumentationFile>
+    </PropertyGroup>
+    <ItemGroup>
+      <PackageReference Include="Portable.BouncyCastle" Version="1.8.5" />
+    </ItemGroup>
+
+</Project>

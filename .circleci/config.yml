@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: microsoft/dotnet:2.2-sdk
+    steps:
+      - checkout
+      - run:
+          name: dotnet restore
+          command: dotnet restore
+      - run:
+          name: Run xunit tests
+          command: dotnet test Cryptography.Asymmetric.Tests/Cryptography.Asymmetric.Tests.csproj
