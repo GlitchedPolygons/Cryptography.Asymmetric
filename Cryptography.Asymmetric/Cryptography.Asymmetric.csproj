@@ -18,10 +18,10 @@
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <DocumentationFile>bin\Release\Cryptography.Asymmetric.xml</DocumentationFile>
+      <DocumentationFile>bin\Release\netstandard2.0\Cryptography.Asymmetric.xml</DocumentationFile>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-        <DocumentationFile>bin\Debug\Cryptography.Asymmetric.xml</DocumentationFile>
+        <DocumentationFile>bin\Debug\netstandard2.0\Cryptography.Asymmetric.xml</DocumentationFile>
     </PropertyGroup>
     <ItemGroup>
       <PackageReference Include="Portable.BouncyCastle" Version="1.8.5" />
