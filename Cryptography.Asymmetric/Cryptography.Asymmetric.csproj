@@ -13,6 +13,7 @@
         <Company>Glitched Polygons</Company>
         <PackageProjectUrl>https://github.com/GlitchedPolygons/Cryptography.Asymmetric</PackageProjectUrl>
         <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0.txt</PackageLicenseUrl>
+        <PackageIconUrl>https://media.githubusercontent.com/media/GlitchedPolygons/NugetIcons/2ad18a76a2ca61702c33a05f497ddbd6c03fcaf9/crypto-icon.png</PackageIconUrl>
         <RepositoryUrl>https://github.com/GlitchedPolygons/Cryptography.Asymmetric</RepositoryUrl>
         <PackageTags>c# crypto cryptography lib service interface rsa key keygen encrypt decrypt sign verify string bytes data</PackageTags>
     </PropertyGroup>
