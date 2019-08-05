@@ -1,5 +1,5 @@
 [![NuGet](https://img.shields.io/nuget/v/GlitchedPolygons.Services.Cryptography.Asymmetric.svg)](https://www.nuget.org/packages/GlitchedPolygons.Services.Cryptography.Asymmetric)
-[![API](https://img.shields.io/badge/api-docs-brightgreen.svg)](http://localhost:8080/api/GlitchedPolygons.Services.Cryptography.Asymmetric.html) [![CircleCI](https://circleci.com/gh/GlitchedPolygons/Cryptography.Asymmetric.svg?style=shield)](https://circleci.com/gh/GlitchedPolygons/Cryptography.Asymmetric) [![Travis Build Status](https://travis-ci.org/GlitchedPolygons/Cryptography.Asymmetric.svg?branch=master)](https://travis-ci.org/GlitchedPolygons/Cryptography.Asymmetric)
+[![API](https://img.shields.io/badge/api-docs-brightgreen.svg)](https://glitchedpolygons.github.io/Cryptography.Asymmetric/api/GlitchedPolygons.Services.Cryptography.Asymmetric.html) [![CircleCI](https://circleci.com/gh/GlitchedPolygons/Cryptography.Asymmetric.svg?style=shield)](https://circleci.com/gh/GlitchedPolygons/Cryptography.Asymmetric) [![Travis Build Status](https://travis-ci.org/GlitchedPolygons/Cryptography.Asymmetric.svg?branch=master)](https://travis-ci.org/GlitchedPolygons/Cryptography.Asymmetric)
 
 # Asymmetric Cryptography (RSA)
 
@@ -15,7 +15,7 @@ You can encrypt, decrypt, sign and verify `string` and `byte[]` arrays with ease
 
 The `IAsymmetricCryptographyRSA` interface provides functionality for all basic asymmetric RSA crypto operations you need for your C# project. 
 RSA keys can be generated in variable key sizes and exported into comfortable PEM strings using `IAsymmetricKeygenRSA`.
-For more information, check out the [API Documentation](http://localhost:8080/api/GlitchedPolygons.Services.Cryptography.Asymmetric.html).
+For more information, check out the [API Documentation](https://glitchedpolygons.github.io/Cryptography.Asymmetric/api/GlitchedPolygons.Services.Cryptography.Asymmetric.html).
 
 **Technology used:**
 * C# ([netstandard2.0](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md))
@@ -25,4 +25,4 @@ For more information, check out the [API Documentation](http://localhost:8080/ap
 ---
 
 API docs can be found here:
-_[glitchedpolygons.github.io/Cryptography.Asymmetric](http://localhost:8080/api/GlitchedPolygons.Services.Cryptography.Asymmetric.html)_
+_[glitchedpolygons.github.io/Cryptography.Asymmetric](https://glitchedpolygons.github.io/Cryptography.Asymmetric/api/GlitchedPolygons.Services.Cryptography.Asymmetric.html)_
