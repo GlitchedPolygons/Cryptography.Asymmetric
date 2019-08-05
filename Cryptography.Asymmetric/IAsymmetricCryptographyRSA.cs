@@ -4,6 +4,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
     /// Service interface for encrypting and decrypting <c>string</c>s and <c>byte</c>[] arrays.<para> </para>
     /// Make sure that everything you encrypt with these methods will also be decrypted again using the same code.<para> </para>
     /// DO NOT MIX crypto libraries under any circumstances!
+    /// <seealso cref="IAsymmetricKeygenRSA"/>
     /// </summary>
     public interface IAsymmetricCryptographyRSA
     {

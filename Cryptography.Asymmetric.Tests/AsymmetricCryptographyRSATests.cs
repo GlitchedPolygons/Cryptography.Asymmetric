@@ -6,6 +6,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
 {
     public class AsymmetricCryptographyRSATests
     {
+        private readonly IAsymmetricKeygenRSA keygen = new AsymmetricKeygenRSA();
         private readonly IAsymmetricCryptographyRSA crypto = new AsymmetricCryptographyRSA();
 
         private readonly string text = Guid.NewGuid().ToString("D");
@@ -15,6 +16,8 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
         private readonly string publicTestKeyPem2 = File.ReadAllText("TestData/KeyPair2/Public");
         private readonly byte[] data = new byte[] { 1, 2, 3, 64, 128, 1, 3, 3, 7, 6, 9, 4, 2, 0, 1, 9, 9, 6, 58, 67, 55, 100, 96 };
 
+        private Tuple<string,string> FreshKeys(RSAKeySize keySize = RSAKeySize.RSA2048bit) => keygen.GenerateKeyPair(keySize).GetAwaiter().GetResult();
+        
         [Fact]
         public void AsymmetricCryptography_EncryptString_DecryptString_IdenticalAfterwards()
         {
@@ -22,12 +25,57 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
             string decr = crypto.Decrypt(encr, privateKeyPem1);
             Assert.Equal(decr, text);
         }
+        
+        [Fact]
+        public void AsymmetricCryptography_EncryptStringAlt_DecryptString_IdenticalAfterwards()
+        {
+            string encr = crypto.Encrypt(text, publicTestKeyPem2);
+            string decr = crypto.Decrypt(encr, privateKeyPem2);
+            Assert.Equal(decr, text);
+        }
+        
+        [Fact]
+        public void AsymmetricCryptography_EncryptString512bit_DecryptString_IdenticalAfterwards()
+        {
+            Tuple<string, string> keys = FreshKeys(RSAKeySize.RSA512bit);
+            string encr = crypto.Encrypt(text, keys.Item1);
+            string decr = crypto.Decrypt(encr, keys.Item2);
+            Assert.Equal(decr, text);
+        }
+        
+        [Fact]
+        public void AsymmetricCryptography_EncryptString1024bit_DecryptString_IdenticalAfterwards()
+        {
+            Tuple<string, string> keys = FreshKeys(RSAKeySize.RSA1024bit);
+            string encr = crypto.Encrypt(text, keys.Item1);
+            string decr = crypto.Decrypt(encr, keys.Item2);
+            Assert.Equal(decr, text);
+        }
+        
+        [Fact]
+        public void AsymmetricCryptography_EncryptString2048bit_DecryptString_IdenticalAfterwards()
+        {
+            Tuple<string, string> keys = FreshKeys(RSAKeySize.RSA2048bit);
+            string encr = crypto.Encrypt(text, keys.Item1);
+            string decr = crypto.Decrypt(encr, keys.Item2);
+            Assert.Equal(decr, text);
+        }
+        
+        [Fact]
+        public void AsymmetricCryptography_EncryptString4096bit_DecryptString_IdenticalAfterwards()
+        {
+            Tuple<string, string> keys = FreshKeys(RSAKeySize.RSA4096bit);
+            string encr = crypto.Encrypt(text, keys.Item1);
+            string decr = crypto.Decrypt(encr, keys.Item2);
+            Assert.Equal(decr, text);
+        }
 
         [Fact]
         public void AsymmetricCryptography_EncryptStringUsingPrivateKey_DecryptString_IdenticalAfterwards_ShouldAlsoWork()
         {
-            string encr = crypto.Encrypt(text, privateKeyPem1);
-            string decr = crypto.Decrypt(encr, privateKeyPem1);
+            Tuple<string, string> keys = FreshKeys();
+            string encr = crypto.Encrypt(text, keys.Item2);
+            string decr = crypto.Decrypt(encr, keys.Item2);
             Assert.Equal(decr, text);
         }
 
@@ -77,8 +125,9 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
         [Fact]
         public void AsymmetricCryptography_EncryptString_DecryptStringUsingPublicKey_ReturnsNull()
         {
-            string encr = crypto.Encrypt(text, publicTestKeyPem1);
-            string decr = crypto.Decrypt(encr, publicTestKeyPem1);
+            Tuple<string, string> keys = FreshKeys();
+            string encr = crypto.Encrypt(text, keys.Item1);
+            string decr = crypto.Decrypt(encr, keys.Item1);
             Assert.NotEqual(text, decr);
             Assert.Null(decr);
         }
@@ -144,6 +193,60 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
         {
             string sig = crypto.Sign(text, privateKeyPem1);
             bool verified = crypto.Verify(text, sig, publicTestKeyPem1);
+            Assert.True(verified);
+            Assert.NotNull(sig);
+            Assert.NotEmpty(sig);
+        }
+        
+        [Fact]
+        public void AsymmetricCryptography_SignStringAlt_VerifySignature_ReturnsTrue_Succeeds()
+        {
+            string sig = crypto.Sign(text, privateKeyPem2);
+            bool verified = crypto.Verify(text, sig, publicTestKeyPem2);
+            Assert.True(verified);
+            Assert.NotNull(sig);
+            Assert.NotEmpty(sig);
+        }
+        
+        [Fact]
+        public void AsymmetricCryptography_SignString512bit_VerifySignature_ReturnsTrue_Succeeds()
+        {
+            Tuple<string, string> keys = FreshKeys(RSAKeySize.RSA512bit);
+            string sig = crypto.Sign(text, keys.Item2);
+            bool verified = crypto.Verify(text, sig, keys.Item1);
+            Assert.True(verified);
+            Assert.NotNull(sig);
+            Assert.NotEmpty(sig);
+        }
+        
+        [Fact]
+        public void AsymmetricCryptography_SignString1024bit_VerifySignature_ReturnsTrue_Succeeds()
+        {
+            Tuple<string, string> keys = FreshKeys(RSAKeySize.RSA1024bit);
+            string sig = crypto.Sign(text, keys.Item2);
+            bool verified = crypto.Verify(text, sig, keys.Item1);
+            Assert.True(verified);
+            Assert.NotNull(sig);
+            Assert.NotEmpty(sig);
+        }
+        
+        [Fact]
+        public void AsymmetricCryptography_SignString2048bit_VerifySignature_ReturnsTrue_Succeeds()
+        {
+            Tuple<string, string> keys = FreshKeys(RSAKeySize.RSA2048bit);
+            string sig = crypto.Sign(text, keys.Item2);
+            bool verified = crypto.Verify(text, sig, keys.Item1);
+            Assert.True(verified);
+            Assert.NotNull(sig);
+            Assert.NotEmpty(sig);
+        }
+        
+        [Fact]
+        public void AsymmetricCryptography_SignString4096bit_VerifySignature_ReturnsTrue_Succeeds()
+        {
+            Tuple<string, string> keys = FreshKeys(RSAKeySize.RSA4096bit);
+            string sig = crypto.Sign(text, keys.Item2);
+            bool verified = crypto.Verify(text, sig, keys.Item1);
             Assert.True(verified);
             Assert.NotNull(sig);
             Assert.NotEmpty(sig);
