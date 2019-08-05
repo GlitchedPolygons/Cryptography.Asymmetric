@@ -7,6 +7,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
 {
     /// <summary>
     /// Extension methods for <see cref="Org.BouncyCastle.Crypto.AsymmetricKeyParameter"/>.
+    /// <seealso cref="RSAKeySize"/>
     /// <seealso cref="AsymmetricKeyParameter"/>
     /// <seealso cref="IAsymmetricKeygenRSA"/>
     /// <seealso cref="IAsymmetricCryptographyRSA"/>
@@ -14,10 +15,10 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
     public static class AsymmetricKeyParameterExtensions
     {
         /// <summary>
-        /// Converts a BouncyCastle <see cref="AsymmetricKeyParameter"/> to <c>string</c> (PEM-formatted).
+        /// Converts a BouncyCastle <see cref="AsymmetricKeyParameter"/> to a PEM-formatted <c>string</c>.
         /// </summary>
         /// <param name="key">The key to stringify.</param>
-        /// <returns><see cref="string"/> containing the PEM-formatted key.</returns>
+        /// <returns><c>string</c> containing the PEM-formatted key.</returns>
         public static string ToPemString(this AsymmetricKeyParameter key)
         {
             using (var sw = new StringWriter())

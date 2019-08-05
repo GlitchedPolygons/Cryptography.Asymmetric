@@ -35,12 +35,11 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
         }
 
         #region Encrypting and decrypting
-        
         /// <summary>
-        /// Encrypts the specified text using the provided RSA public key, which needs to be a PEM-formatted <c>string</c>.
+        /// Encrypts the specified text using the provided RSA public key.
         /// </summary>
         /// <param name="text">The plain text to encrypt.</param>
-        /// <param name="publicKeyPem">The public RSA key for encryption (PEM-formatted <c>string</c>).</param>
+        /// <param name="publicKeyPem">The public RSA key for encryption. Needs to be a PEM-formatted <c>string</c>.</param>
         /// <returns>The encrypted <c>string</c>; <c>string.Empty</c> if the passed key or plain text argument was <c>null</c> or empty; <c>null</c> if encryption failed.</returns>
         public string Encrypt(string text, string publicKeyPem)
         {
@@ -59,7 +58,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
         }
 
         /// <summary>
-        /// Decrypts the specified text using the provided RSA private key, which needs to be a PEM-formatted <c>string</c>.
+        /// Decrypts the specified text using the provided RSA private key.
         /// </summary>
         /// <param name="encryptedText">The encrypted text to decrypt.</param>
         /// <param name="privateKeyPem">The private RSA key needed for decryption (PEM-formatted <c>string</c>).</param>
@@ -81,11 +80,12 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
         }
 
         /// <summary>
-        /// Encrypts the specified bytes using the provided RSA public key, which needs to be a PEM-formatted <c>string</c>.
+        /// Encrypts the specified bytes using the provided RSA public key,
+        /// which needs to be a PEM-formatted <c>string</c>.
         /// </summary>
         /// <param name="data">The data (<c>byte[]</c> array) to encrypt.</param>
         /// <param name="publicKeyPem">The public key (PEM-formatted <c>string</c>) to use for encryption.</param>
-        /// <returns>The encrypted bytes (<c>System.Byte[]</c>); <c>Array.Empty&lt;byte&gt;()</c> if the passed data or key argument was <c>null</c> or empty; <c>null</c> if encryption failed.</returns>
+        /// <returns>The encrypted bytes (<c>System.Byte[]</c>) if successful; <c>Array.Empty&lt;byte&gt;()</c> if the passed data or key argument was <c>null</c> or empty; <c>null</c> if encryption failed.</returns>
         public byte[] Encrypt(byte[] data, string publicKeyPem)
         {
             if (data is null || data.Length == 0 || string.IsNullOrEmpty(publicKeyPem))
@@ -107,7 +107,8 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
         }
 
         /// <summary>
-        /// Decrypts the specified bytes using the provided private RSA key (which needs to be a PEM-formatted <c>string</c>).
+        /// Decrypts the specified bytes using the provided private RSA key
+        /// (the key needs to be a PEM-formatted <c>string</c>).
         /// </summary>
         /// <param name="encryptedData">The encrypted data bytes (<c>byte[]</c>).</param>
         /// <param name="privateKeyPem">The private RSA key to use for decryption (PEM-formatted <c>string</c>).</param>
@@ -163,12 +164,11 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
         }
 
         /// <summary>
-        /// Verifies a signature that was obtained using <see cref="Sign(string,string)"/>
-        /// with a public RSA key (which needs to be a PEM-formatted <c>string</c>).<para> </para>
+        /// Verifies a signature that was obtained using <see cref="Sign(string,string)"/> with a public RSA key (which needs to be a PEM-formatted <c>string</c>).<para> </para>
         /// </summary>
         /// <param name="data">The data whose signature you want to verify.</param>
         /// <param name="signature">The passed <paramref name="data"/>'s signature (return value of <see cref="Sign(string,string)"/>).</param>
-        /// <param name="publicKeyPem">The public RSA key (PEM-formatted) to use for signature verification.</param>
+        /// <param name="publicKeyPem">The public RSA key (PEM-formatted <c>string</c>) to use for signature verification.</param>
         /// <returns>Whether the data's signature verification succeeded or not.</returns>
         public bool Verify(string data, string signature, string publicKeyPem)
         {
@@ -194,8 +194,9 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
         /// were <c>null</c> or empty. If the procedure fails entirely, <c>null</c> is returned.
         /// </summary>
         /// <param name="data">The data to sign.</param>
-        /// <param name="privateKeyPem">The private RSA key to use for generating the signature (PEM-formatted <c>string</c>).</param>
+        /// <param name="privateKeyPem">The private RSA key to use for generating the signature (PEM-formatted <c>string</c>)</param>
         /// <returns>The signature (<c>byte[]</c>), <c>string.Empty</c> if the provided <paramref name="data"/> and/or <paramref name="privateKeyPem"/> parameters were <c>null</c> or empty. Returns <c>null</c> if signing failed entirely.</returns>
+        /// <seealso cref="SignerUtilities"/>
         public byte[] Sign(byte[] data, string privateKeyPem)
         {
             if (data is null || data.Length == 0 || string.IsNullOrEmpty(privateKeyPem))
@@ -222,7 +223,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
         /// </summary>
         /// <param name="data">The data whose signature you want to verify.</param>
         /// <param name="signature">The passed <paramref name="data"/>'s signature (return value of <see cref="Sign(byte[],string)"/>).</param>
-        /// <param name="publicKeyPem">The public RSA key (PEM-formatted) to use for signature verification.</param>
+        /// <param name="publicKeyPem">The public RSA key (PEM-formatted <c>string</c>) to use for signature verification.</param>
         /// <returns>Whether the data's signature verification succeeded or not.</returns>
         public bool Verify(byte[] data, byte[] signature, string publicKeyPem)
         {
