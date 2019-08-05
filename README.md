@@ -1,3 +1,4 @@
+[![NuGet](https://img.shields.io/nuget/v/GlitchedPolygons.Services.Cryptography.Asymmetric.svg)](https://www.nuget.org/packages/GlitchedPolygons.Services.Cryptography.Asymmetric)
 [![API](https://img.shields.io/badge/api-docs-brightgreen.svg)](https://glitchedpolygons.github.io/Cryptography.Asymmetric/api/index.html) [![CircleCI](https://circleci.com/gh/GlitchedPolygons/Cryptography.Asymmetric.svg?style=shield)](https://circleci.com/gh/GlitchedPolygons/Cryptography.Asymmetric) [![Travis Build Status](https://travis-ci.org/GlitchedPolygons/Cryptography.Asymmetric.svg?branch=master)](https://travis-ci.org/GlitchedPolygons/Cryptography.Asymmetric)
 
 # Asymmetric Cryptography (RSA)
