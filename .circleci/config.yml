@@ -10,4 +10,4 @@ jobs:
           command: dotnet restore
       - run:
           name: Run xunit tests
-          command: dotnet test tests/Cryptography.Asymmetric.Tests.csproj
+          command: cd tests && dotnet test
