@@ -1,0 +1,273 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/git/glitched-polygons/nuget/Cryptography.Asymmetric/docs/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "log_codes": [
+        "ReferencedXrefPropertyNotString"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.html",
+          "hash": "QP2DXAaa7Rr//mRimcza8A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeyParameterExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeyParameterExtensions.html",
+          "hash": "XX+t19Gt8YEvpK1q9yujrA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "ReferencedXrefPropertyNotString"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.html",
+          "hash": "sjfNd5BVLL99yzTQxbxJmg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "ReferencedXrefPropertyNotString"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.html",
+          "hash": "Db34iFeTPF7wXLEKBmQUiQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "ReferencedXrefPropertyNotString"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricKeygenRSA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricKeygenRSA.html",
+          "hash": "RdPL5uhG+1dLxjliwJapew=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA1024.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA1024.html",
+          "hash": "zS5rP3WLwbBDlsfkafsaDg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA2048.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA2048.html",
+          "hash": "QGcdQWd/QwkECe1aWAQbKA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA4096.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA4096.html",
+          "hash": "unFbmv0tkQ80q7bs8JGCVg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA512.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA512.html",
+          "hash": "J2wGrdzgg1DyLDpLjfrcqQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "ReferencedXrefPropertyNotString"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.html",
+          "hash": "qLj+PFDEFRgQjBiO82KFaQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.html",
+          "hash": "Xnv754nLieI2jD2IQ0HINQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "1hDnVDTQM5HNvooKbVVKMg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "82fYFCikW/FMocbi2tgDFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "6/D1J4b1SvvIuIu1vstK7w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "t7iiFrmuYmrKWisdq+lN6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "oKlvlY7C1KvanP8EGdsFtw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "CTRBtwqjkNOufjixN6uYcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 11,
+          "skipped_file_count": 11
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
