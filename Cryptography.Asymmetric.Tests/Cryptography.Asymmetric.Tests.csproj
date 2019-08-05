@@ -2,11 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp2.2</TargetFramework>
-
         <IsPackable>false</IsPackable>
-
         <AssemblyName>GlitchedPolygons.Services.Cryptography.Asymmetric.Tests</AssemblyName>
-
         <RootNamespace>GlitchedPolygons.Services.Cryptography.Asymmetric.Tests</RootNamespace>
     </PropertyGroup>
 

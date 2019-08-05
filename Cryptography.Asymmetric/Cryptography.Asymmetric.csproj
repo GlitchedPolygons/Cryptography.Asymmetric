@@ -2,17 +2,19 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <Title>GlitchedPolygons.Services.Cryptography.Asymmetric</Title>
         <AssemblyName>GlitchedPolygons.Services.Cryptography.Asymmetric</AssemblyName>
         <RootNamespace>GlitchedPolygons.Services.Cryptography.Asymmetric</RootNamespace>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Product>GlitchedPolygons.Services.Cryptography.Asymmetric</Product>
         <PackageId>GlitchedPolygons.Services.Cryptography.Asymmetric</PackageId>
         <Description>IoC friendly C# .netstandard2.0 service interface for asymmetric cryptographic operations.</Description>
-        <Title>GlitchedPolygons.Services.Cryptography.Asymmetric</Title>
         <Authors>Glitched Polygons</Authors>
         <Company>Glitched Polygons</Company>
+        <PackageVersion>1.0.0</PackageVersion>
         <PackageProjectUrl>https://github.com/GlitchedPolygons/Cryptography.Asymmetric</PackageProjectUrl>
-        <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0.txt</PackageLicenseUrl>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <PackageIconUrl>https://media.githubusercontent.com/media/GlitchedPolygons/NugetIcons/2ad18a76a2ca61702c33a05f497ddbd6c03fcaf9/crypto-icon.png</PackageIconUrl>
         <RepositoryUrl>https://github.com/GlitchedPolygons/Cryptography.Asymmetric</RepositoryUrl>
         <PackageTags>c# crypto cryptography lib service interface rsa key keygen encrypt decrypt sign verify string bytes data</PackageTags>
