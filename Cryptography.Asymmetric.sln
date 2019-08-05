@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cryptography.Asymmetric", "Cryptography.Asymmetric\Cryptography.Asymmetric.csproj", "{56F56E61-A970-457B-8AEA-A72557212721}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cryptography.Asymmetric", "src\Cryptography.Asymmetric.csproj", "{56F56E61-A970-457B-8AEA-A72557212721}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cryptography.Asymmetric.Tests", "Cryptography.Asymmetric.Tests\Cryptography.Asymmetric.Tests.csproj", "{9A7E0214-B961-48B1-9B2C-0BB58AAEB2F1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cryptography.Asymmetric.Tests", "tests\Cryptography.Asymmetric.Tests.csproj", "{9A7E0214-B961-48B1-9B2C-0BB58AAEB2F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
