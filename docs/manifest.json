@@ -12,7 +12,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricCryptographyRSA.html",
-          "hash": "QP2DXAaa7Rr//mRimcza8A=="
+          "hash": "BcrTj1FjHkpGSLr1zBOWZw=="
         }
       },
       "is_incremental": true,
@@ -24,7 +24,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeyParameterExtensions.html",
-          "hash": "XX+t19Gt8YEvpK1q9yujrA=="
+          "hash": "Q8AOPNf7dvD010Qn85FA6Q=="
         }
       },
       "is_incremental": true,
@@ -39,7 +39,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.html",
-          "hash": "sjfNd5BVLL99yzTQxbxJmg=="
+          "hash": "tGGzLuV3AycZvh9BWhd8MA=="
         }
       },
       "is_incremental": true,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricCryptographyRSA.html",
-          "hash": "Db34iFeTPF7wXLEKBmQUiQ=="
+          "hash": "0qwwKRZcCR1MUhMZvJq2RQ=="
         }
       },
       "is_incremental": true,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricKeygenRSA.html",
-          "hash": "RdPL5uhG+1dLxjliwJapew=="
+          "hash": "JAPIXCo0wLrZo+GvazyyXA=="
         }
       },
       "is_incremental": true,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA1024.html",
-          "hash": "zS5rP3WLwbBDlsfkafsaDg=="
+          "hash": "QVvNOKl+yawY4t6wdVYaiw=="
         }
       },
       "is_incremental": true,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA2048.html",
-          "hash": "QGcdQWd/QwkECe1aWAQbKA=="
+          "hash": "lanO5Hnz0w3xYqKVhbgFQQ=="
         }
       },
       "is_incremental": true,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA4096.html",
-          "hash": "unFbmv0tkQ80q7bs8JGCVg=="
+          "hash": "CS5kkPG+O4WuuYk2sccYhg=="
         }
       },
       "is_incremental": true,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA512.html",
-          "hash": "J2wGrdzgg1DyLDpLjfrcqQ=="
+          "hash": "LvSX8TvqoHc2NyztutBvBQ=="
         }
       },
       "is_incremental": true,
@@ -132,7 +132,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.html",
-          "hash": "qLj+PFDEFRgQjBiO82KFaQ=="
+          "hash": "TbPcjLVVyAZDrh+5dX3NgA=="
         }
       },
       "is_incremental": true,
@@ -199,15 +199,18 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "oKlvlY7C1KvanP8EGdsFtw=="
+          "hash": "NlRKQoAKXBGDPlsVPAsdZw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -232,24 +235,24 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 11,
-          "skipped_file_count": 11
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 3,
-          "skipped_file_count": 3
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 2
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 11,
+          "skipped_file_count": 11
         }
       }
     },

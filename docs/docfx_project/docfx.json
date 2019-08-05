@@ -5,7 +5,7 @@
         {
           "src":"../..",
           "files": [
-            "Cryptography.Asymmetric/**.csproj"
+            "src/**.csproj"
           ]
         }
       ],
