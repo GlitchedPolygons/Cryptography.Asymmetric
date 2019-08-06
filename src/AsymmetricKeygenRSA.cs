@@ -5,8 +5,6 @@ using Org.BouncyCastle.Security;
 using Org.BouncyCastle.Crypto;
 using Org.BouncyCastle.Crypto.Generators;
 
-using Microsoft.Extensions.Logging;
-
 namespace GlitchedPolygons.Services.Cryptography.Asymmetric
 {
     /// <summary>
@@ -18,14 +16,15 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
         /// <summary>
         /// Optional error logger.
         /// </summary>
-        private readonly ILogger logger;
+        private readonly Action<string> errorCallback;
         
         /// <summary>
         /// Creates a new asymmetric RSA key generator.
+        /// <param name="errorCallback">Optional callback for when an exception is thrown during key generation (could be fed back to your own personal error logging provider for example). The passed <c>string</c> parameter is the error message, including the full exception's content...</param>
         /// </summary>
-        public AsymmetricKeygenRSA(ILogger logger = null)
+        public AsymmetricKeygenRSA(Action<string> errorCallback = null)
         {
-            this.logger = logger;
+            this.errorCallback = errorCallback;
         }
 
         /// <summary>
@@ -48,7 +47,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
                 }
                 catch (Exception e)
                 {
-                    logger?.LogError($"{nameof(AsymmetricKeygenRSA)}::{nameof(GenerateKeyPair)}: RSA key pair generation failed. Thrown exception: {e.ToString()}");
+                    errorCallback?.Invoke($"{nameof(AsymmetricKeygenRSA)}::{nameof(GenerateKeyPair)}: RSA key pair generation failed. Thrown exception: {e.ToString()}");
                     return null;
                 }
             });
