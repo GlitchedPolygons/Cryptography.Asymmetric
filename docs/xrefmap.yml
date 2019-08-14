@@ -120,12 +120,15 @@ references:
   commentId: T:GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA
   fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA
   nameWithType: AsymmetricKeygenRSA
-- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.#ctor(Microsoft.Extensions.Logging.ILogger)
-  name: AsymmetricKeygenRSA(ILogger)
-  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.html#GlitchedPolygons_Services_Cryptography_Asymmetric_AsymmetricKeygenRSA__ctor_Microsoft_Extensions_Logging_ILogger_
-  commentId: M:GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.#ctor(Microsoft.Extensions.Logging.ILogger)
-  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.AsymmetricKeygenRSA(Microsoft.Extensions.Logging.ILogger)
-  nameWithType: AsymmetricKeygenRSA.AsymmetricKeygenRSA(ILogger)
+- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.#ctor(System.Action{System.String})
+  name: AsymmetricKeygenRSA(Action<String>)
+  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.html#GlitchedPolygons_Services_Cryptography_Asymmetric_AsymmetricKeygenRSA__ctor_System_Action_System_String__
+  commentId: M:GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.#ctor(System.Action{System.String})
+  name.vb: AsymmetricKeygenRSA(Action(Of String))
+  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.AsymmetricKeygenRSA(System.Action<System.String>)
+  fullName.vb: GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.AsymmetricKeygenRSA(System.Action(Of System.String))
+  nameWithType: AsymmetricKeygenRSA.AsymmetricKeygenRSA(Action<String>)
+  nameWithType.vb: AsymmetricKeygenRSA.AsymmetricKeygenRSA(Action(Of String))
 - uid: GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.#ctor*
   name: AsymmetricKeygenRSA
   href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.html#GlitchedPolygons_Services_Cryptography_Asymmetric_AsymmetricKeygenRSA__ctor_
