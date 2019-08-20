@@ -23,7 +23,6 @@ For more information, check out the [API Documentation](https://glitchedpolygons
 **Technology used:**
 * C# ([netstandard2.0](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md))
 * [Portable.BouncyCastle](https://github.com/onovotny/bc-csharp)
-* [Microsoft.Extensions.Logging](https://github.com/aspnet/Extensions/tree/master/src/Logging)
 
 ---
 
