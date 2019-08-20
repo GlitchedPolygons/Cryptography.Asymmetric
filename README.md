@@ -1,4 +1,4 @@
-[![NuGet](https://img.shields.io/nuget/v/GlitchedPolygons.Services.Cryptography.Asymmetric.svg)](https://www.nuget.org/packages/GlitchedPolygons.Services.Cryptography.Asymmetric)
+[![NuGet](https://buildstats.info/nuget/GlitchedPolygons.Services.Cryptography.Asymmetric)](https://www.nuget.org/packages/GlitchedPolygons.Services.Cryptography.Asymmetric)
 [![API](https://img.shields.io/badge/api-docs-informational)](https://glitchedpolygons.github.io/Cryptography.Asymmetric/api/GlitchedPolygons.Services.Cryptography.Asymmetric.html) 
 [![AppVeyor](https://ci.appveyor.com/api/projects/status/y5873yb3icfdjqp2/branch/master?svg=true)](https://ci.appveyor.com/project/GlitchedPolygons/cryptography-asymmetric/branch/master)
 [![Travis Build Status](https://travis-ci.org/GlitchedPolygons/Cryptography.Asymmetric.svg?branch=master)](https://travis-ci.org/GlitchedPolygons/Cryptography.Asymmetric)
