@@ -31,7 +31,6 @@
         <PackageProjectUrl>https://github.com/GlitchedPolygons/Cryptography.Asymmetric</PackageProjectUrl>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <PackageIconUrl>https://media.githubusercontent.com/media/GlitchedPolygons/NugetIcons/2ad18a76a2ca61702c33a05f497ddbd6c03fcaf9/crypto-icon.png</PackageIconUrl>
         <RepositoryUrl>https://github.com/GlitchedPolygons/Cryptography.Asymmetric</RepositoryUrl>
         <PackageTags>c# crypto cryptography lib service interface rsa key keygen encrypt decrypt sign verify string bytes data</PackageTags>
     </PropertyGroup>
@@ -45,5 +44,14 @@
     <ItemGroup>
       <PackageReference Include="Portable.BouncyCastle" Version="1.8.5" />
     </ItemGroup>
+
+
+<PropertyGroup>
+  <PackageIcon>icon.png</PackageIcon>
+</PropertyGroup>
+
+<ItemGroup>
+  <None Include="icon.png" Pack="true" PackagePath="\"/>
+</ItemGroup>
 
 </Project>
