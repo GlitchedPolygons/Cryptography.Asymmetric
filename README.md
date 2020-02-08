@@ -4,6 +4,7 @@
 [![AppVeyor](https://ci.appveyor.com/api/projects/status/y5873yb3icfdjqp2/branch/master?svg=true)](https://ci.appveyor.com/project/GlitchedPolygons/cryptography-asymmetric/branch/master)
 [![Travis Build Status](https://travis-ci.org/GlitchedPolygons/Cryptography.Asymmetric.svg?branch=master)](https://travis-ci.org/GlitchedPolygons/Cryptography.Asymmetric)
 [![CircleCI](https://circleci.com/gh/GlitchedPolygons/Cryptography.Asymmetric.svg?style=shield)](https://circleci.com/gh/GlitchedPolygons/Cryptography.Asymmetric)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/af5f70aa367443d88341549cdc6fa566)](https://www.codacy.com/manual/GlitchedPolygons/Cryptography.Asymmetric?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GlitchedPolygons/Cryptography.Asymmetric&amp;utm_campaign=Badge_Grade)
 
 # Asymmetric Cryptography (RSA)
 
