@@ -114,6 +114,15 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
             string encr = crypto.Encrypt(s, publicTestKeyPem1);
             Assert.Empty(encr);
         }
+        
+        [Theory]
+        [InlineData(null)]
+        [InlineData(new byte[0])]
+        public void AsymmetricCryptography_EncryptNullOrEmptyBytesArray_ReturnsEmptyBytesArray(byte[] d)
+        {
+            byte[] encr = crypto.Encrypt(d, publicTestKeyPem1);
+            Assert.Empty(encr);
+        }
 
         [Theory]
         [InlineData("")]
@@ -131,6 +140,15 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
         {
             string decr = crypto.Decrypt(s, publicTestKeyPem1);
             Assert.Empty(decr);
+        }
+        
+        [Theory]
+        [InlineData(null)]
+        [InlineData(new byte[0])]
+        public void AsymmetricCryptography_DecryptNullOrEmptyBytesArray_ReturnsEmptyBytesArray(byte[] d)
+        {
+            byte[] encr = crypto.Decrypt(d, publicTestKeyPem1);
+            Assert.Empty(encr);
         }
 
         [Theory]
