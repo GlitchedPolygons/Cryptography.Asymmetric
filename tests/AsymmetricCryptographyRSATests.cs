@@ -23,10 +23,10 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
 {
     public class AsymmetricCryptographyRSATests
     {
-        private static readonly RSAKeySize KEY_SIZE_512 = new RSA512();
-        private static readonly RSAKeySize KEY_SIZE_1024 = new RSA1024();
-        private static readonly RSAKeySize KEY_SIZE_2048 = new RSA2048();
-        private static readonly RSAKeySize KEY_SIZE_4096 = new RSA4096();
+        private static readonly RSAKeySize KEY_SIZE_512 = RSAKeySize.RSA512;
+        private static readonly RSAKeySize KEY_SIZE_1024 = RSAKeySize.RSA1024;
+        private static readonly RSAKeySize KEY_SIZE_2048 = RSAKeySize.RSA2048;
+        private static readonly RSAKeySize KEY_SIZE_4096 = RSAKeySize.RSA4096;
         
         private readonly IAsymmetricKeygenRSA keygen = new AsymmetricKeygenRSA();
         private readonly IAsymmetricCryptographyRSA crypto = new AsymmetricCryptographyRSA();
@@ -64,7 +64,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
         [InlineData(4096)]
         public async Task AsymmetricCryptography_EncryptString_DecryptString_IdenticalAfterwards(int keySize)
         {
-            var keys = await FreshKeys(keySize);
+            (string, string) keys = await FreshKeys(keySize);
             string encr = crypto.Encrypt(text, keys.Item1);
             string decr = crypto.Decrypt(encr, keys.Item2);
             Assert.Equal(decr, text);
@@ -93,7 +93,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
         [InlineData(4096)]
         public async Task AsymmetricCryptography_EncryptStringUsingPrivateKey_DecryptString_IdenticalAfterwards_ShouldAlsoWork(int keySize)
         {
-            var keys = await FreshKeys(keySize);
+            (string, string) keys = await FreshKeys(keySize);
             string encr = crypto.Encrypt(text, keys.Item2);
             string decr = crypto.Decrypt(encr, keys.Item2);
             Assert.Equal(decr, text);
@@ -149,7 +149,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
         [InlineData(4096)]
         public async Task AsymmetricCryptography_EncryptString_DecryptStringUsingPublicKey_ReturnsNull(int keySize)
         {
-            var keys = await FreshKeys(keySize);
+            (string, string) keys = await FreshKeys(keySize);
             string encr = crypto.Encrypt(text, keys.Item1);
             string decr = crypto.Decrypt(encr, keys.Item1);
             Assert.NotEqual(text, decr);
@@ -219,7 +219,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
         [InlineData(4096)]
         public async Task AsymmetricCryptography_SignStringUsingPrivateKey_VerifySignatureUsingPublicKey_ReturnsTrue_Succeeds(int keySize)
         {
-            var keys = await FreshKeys(keySize);
+            (string, string) keys = await FreshKeys(keySize);
             string sig = crypto.Sign(text, keys.Item2);
             bool verified = crypto.Verify(text, sig, keys.Item1);
             Assert.True(verified);
@@ -254,7 +254,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
         [InlineData(4096)]
         public async Task AsymmetricCryptography_SignBytes_VerifySignature_ReturnsTrue_Succeeds(int keySize)
         {
-            var keys = await FreshKeys(keySize);
+            (string, string) keys = await FreshKeys(keySize);
             byte[] sig = crypto.Sign(data, keys.Item2);
             bool verified = crypto.Verify(data, sig, keys.Item1);
             Assert.True(verified);
@@ -276,7 +276,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
         [InlineData(4096)]
         public async Task AsymmetricCryptography_SignBytesUsingPublicKey_ReturnsNull(int keySize)
         {
-            var keys = await FreshKeys(keySize);
+            (string, string) keys = await FreshKeys(keySize);
             byte[] sig = crypto.Sign(data, keys.Item1);
             Assert.Null(sig);
         }
@@ -288,7 +288,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
         [InlineData(4096)]
         public async Task AsymmetricCryptography_SignString_VerifyUsingPrivateKey_ReturnsFalse(int keySize)
         {
-            var keys = await FreshKeys(keySize);
+            (string, string) keys = await FreshKeys(keySize);
             string sig = crypto.Sign(text, keys.Item2);
             bool verified = crypto.Verify(text, sig, keys.Item2);
             Assert.False(verified);

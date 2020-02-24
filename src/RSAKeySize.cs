@@ -15,7 +15,6 @@
 */
 
 using System;
-using Org.BouncyCastle.Security;
 
 namespace GlitchedPolygons.Services.Cryptography.Asymmetric
 {
@@ -24,79 +23,27 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
     /// Possible values are 512-bit, 1024-bit, 2048-bit and 4096-bit.<para> </para>
     /// The bigger, the slower, the safer.
     /// </summary>
-    public abstract class RSAKeySize
+    public enum RSAKeySize : int
     {
         /// <summary>
-        /// The underlying key size in bits.
+        /// 512-bit RSA Key (don't use this please!).
         /// </summary>
-        private readonly int size;
-
+        [Obsolete]
+        RSA512 = 512,
+        
         /// <summary>
-        /// Constructs an instance of <see cref="RSAKeySize"/>
-        /// using the provided "<paramref name="size"/>" key size
-        /// in bits (which must be either 512, 1024, 2048 or 4096).
+        /// 1024-bit RSA Key.
         /// </summary>
-        /// <param name="size">RSA key size in bits. Can only be 512, 1024, 2048 or 4096.</param>
-        protected internal RSAKeySize(int size)
-        {
-            if (size % 512 != 0 || size < 512 || size > 4096)
-            {
-                throw new InvalidKeyException($"{nameof(RSAKeySize)}::ctor: The specified key size \"{size}\" is not a valid RSA key size. Valid sizes are 512, 1024, 2048 and 4096-bit.");
-            }
-            this.size = size;
-        }
-
+        RSA1024 = 1024,
+        
         /// <summary>
-        /// Converts an instance of <see cref="RSAKeySize"/> to the corresponding key size <c>int</c>.
+        /// 2048-bit RSA Key.
         /// </summary>
-        /// <param name="keySize">The <see cref="RSAKeySize"/> to convert.</param>
-        /// <returns>The converted key size <c>int</c> in bits.</returns>
-        /// <exception cref="InvalidKeyException">Thrown when the passed key size is invalid: the only valid key sizes are 512, 1024, 2048 and 4096-bit.</exception>
-        public static implicit operator int(RSAKeySize keySize) => keySize.size;
-    }
-
-    /// <summary>
-    /// 512-bit RSA Key.
-    /// </summary>
-    [Obsolete]
-    public sealed class RSA512 : RSAKeySize
-    {
+        RSA2048 = 2048,
+        
         /// <summary>
-        /// Constructs a 512-bit <see cref="RSAKeySize"/>.
+        /// 4096-bit RSA Key.
         /// </summary>
-        public RSA512() : base(512) { }
-    }
-
-    /// <summary>
-    /// 1024-bit RSA Key.
-    /// </summary>
-    public sealed class RSA1024 : RSAKeySize
-    {
-        /// <summary>
-        /// Constructs a 1024-bit <see cref="RSAKeySize"/>.
-        /// </summary>
-        public RSA1024() : base(1024) { }
-    }
-
-    /// <summary>
-    /// 2048-bit RSA Key.
-    /// </summary>
-    public sealed class RSA2048 : RSAKeySize
-    {
-        /// <summary>
-        /// Constructs a 2048-bit <see cref="RSAKeySize"/>.
-        /// </summary>
-        public RSA2048() : base(2048) { }
-    }
-
-    /// <summary>
-    /// 4096-bit RSA Key.
-    /// </summary>
-    public sealed class RSA4096 : RSAKeySize
-    {
-        /// <summary>
-        /// Constructs a 4096-bit <see cref="RSAKeySize"/>.
-        /// </summary>
-        public RSA4096() : base(4096) { }
+        RSA4096 = 4096
     }
 }

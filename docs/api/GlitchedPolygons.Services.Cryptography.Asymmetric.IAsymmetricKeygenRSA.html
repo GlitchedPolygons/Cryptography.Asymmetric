@@ -90,18 +90,18 @@
     <a href="https://github.com/GlitchedPolygons/Cryptography.Asymmetric/new/master/apiSpec/new?filename=GlitchedPolygons_Services_Cryptography_Asymmetric_IAsymmetricKeygenRSA_GenerateKeyPair_GlitchedPolygons_Services_Cryptography_Asymmetric_RSAKeySize_.md&amp;value=---%0Auid%3A%20GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricKeygenRSA.GenerateKeyPair(GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/Cryptography.Asymmetric/blob/master/src/IAsymmetricKeygenRSA.cs/#L34">View Source</a>
+    <a href="https://github.com/GlitchedPolygons/Cryptography.Asymmetric/blob/master/src/IAsymmetricKeygenRSA.cs/#L36">View Source</a>
   </span>
   <a id="GlitchedPolygons_Services_Cryptography_Asymmetric_IAsymmetricKeygenRSA_GenerateKeyPair_" data-uid="GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricKeygenRSA.GenerateKeyPair*"></a>
   <h4 id="GlitchedPolygons_Services_Cryptography_Asymmetric_IAsymmetricKeygenRSA_GenerateKeyPair_GlitchedPolygons_Services_Cryptography_Asymmetric_RSAKeySize_" data-uid="GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricKeygenRSA.GenerateKeyPair(GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize)">GenerateKeyPair(RSAKeySize)</h4>
-  <div class="markdown level1 summary"><p>Generates a new RSA key pair <span class="xref">System.Tuple</span> using the provided RSA key size parameter <code data-dev-comment-type="paramref" class="paramref">keySize</code>.<p> </p>
-Returns the RSA key pair <span class="xref">System.Tuple</span>, where the first item is the public key and the second is the private key.<p> </p>
+  <div class="markdown level1 summary"><p>Generates a new RSA key pair <see cref="!:Tuple"></see> using the provided RSA key size parameter <code data-dev-comment-type="paramref" class="paramref">keySize</code>.<p> </p>
+Returns the RSA key pair <see cref="!:Tuple"></see>, where the first item is the public key and the second is the private key.<p> </p>
 If generation failed for some reason, <code>null</code> is returned.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Tuple&lt;string, string&gt;&gt; GenerateKeyPair(RSAKeySize keySize)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;ValueTuple&lt;string, string&gt;&gt; GenerateKeyPair(RSAKeySize keySize)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,8 +131,8 @@ If generation failed for some reason, <code>null</code> is returned.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Tuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
-        <td><p>The key pair <span class="xref">System.Tuple</span>, where the first item is the public RSA key and the second one is the private key (both PEM-formatted).</p>
+        <td><span class="xref">Task</span>&lt;<span class="xref">ValueTuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><p>The key pair <see cref="!:Tuple"></see>, where the first item is the public RSA key and the second one is the private key (both PEM-formatted). If key generation failed, both tuple items are <code>null</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -148,7 +148,7 @@ If generation failed for some reason, <code>null</code> is returned.</p>
                     <a href="https://github.com/GlitchedPolygons/Cryptography.Asymmetric/new/master/apiSpec/new?filename=GlitchedPolygons_Services_Cryptography_Asymmetric_IAsymmetricKeygenRSA.md&amp;value=---%0Auid%3A%20GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricKeygenRSA%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/GlitchedPolygons/Cryptography.Asymmetric/blob/master/src/IAsymmetricKeygenRSA.cs/#L25" class="contribution-link">View Source</a>
+                    <a href="https://github.com/GlitchedPolygons/Cryptography.Asymmetric/blob/master/src/IAsymmetricKeygenRSA.cs/#L26" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

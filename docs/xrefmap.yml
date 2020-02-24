@@ -120,13 +120,13 @@ references:
   commentId: T:GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA
   fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA
   nameWithType: AsymmetricKeygenRSA
-- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.#ctor(System.Action{System.String})
+- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.#ctor(Action{System.String})
   name: AsymmetricKeygenRSA(Action<String>)
-  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.html#GlitchedPolygons_Services_Cryptography_Asymmetric_AsymmetricKeygenRSA__ctor_System_Action_System_String__
-  commentId: M:GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.#ctor(System.Action{System.String})
+  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.html#GlitchedPolygons_Services_Cryptography_Asymmetric_AsymmetricKeygenRSA__ctor_Action_System_String__
+  commentId: M:GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.#ctor(Action{System.String})
   name.vb: AsymmetricKeygenRSA(Action(Of String))
-  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.AsymmetricKeygenRSA(System.Action<System.String>)
-  fullName.vb: GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.AsymmetricKeygenRSA(System.Action(Of System.String))
+  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.AsymmetricKeygenRSA(Action<System.String>)
+  fullName.vb: GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.AsymmetricKeygenRSA(Action(Of System.String))
   nameWithType: AsymmetricKeygenRSA.AsymmetricKeygenRSA(Action<String>)
   nameWithType.vb: AsymmetricKeygenRSA.AsymmetricKeygenRSA(Action(Of String))
 - uid: GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.#ctor*
@@ -281,117 +281,33 @@ references:
   isSpec: "True"
   fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricKeygenRSA.GenerateKeyPair
   nameWithType: IAsymmetricKeygenRSA.GenerateKeyPair
-- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA1024
-  name: RSA1024
-  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA1024.html
-  commentId: T:GlitchedPolygons.Services.Cryptography.Asymmetric.RSA1024
-  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA1024
-  nameWithType: RSA1024
-- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA1024.#ctor
-  name: RSA1024()
-  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA1024.html#GlitchedPolygons_Services_Cryptography_Asymmetric_RSA1024__ctor
-  commentId: M:GlitchedPolygons.Services.Cryptography.Asymmetric.RSA1024.#ctor
-  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA1024.RSA1024()
-  nameWithType: RSA1024.RSA1024()
-- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA1024.#ctor*
-  name: RSA1024
-  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA1024.html#GlitchedPolygons_Services_Cryptography_Asymmetric_RSA1024__ctor_
-  commentId: Overload:GlitchedPolygons.Services.Cryptography.Asymmetric.RSA1024.#ctor
-  isSpec: "True"
-  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA1024.RSA1024
-  nameWithType: RSA1024.RSA1024
-- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA2048
-  name: RSA2048
-  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA2048.html
-  commentId: T:GlitchedPolygons.Services.Cryptography.Asymmetric.RSA2048
-  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA2048
-  nameWithType: RSA2048
-- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA2048.#ctor
-  name: RSA2048()
-  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA2048.html#GlitchedPolygons_Services_Cryptography_Asymmetric_RSA2048__ctor
-  commentId: M:GlitchedPolygons.Services.Cryptography.Asymmetric.RSA2048.#ctor
-  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA2048.RSA2048()
-  nameWithType: RSA2048.RSA2048()
-- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA2048.#ctor*
-  name: RSA2048
-  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA2048.html#GlitchedPolygons_Services_Cryptography_Asymmetric_RSA2048__ctor_
-  commentId: Overload:GlitchedPolygons.Services.Cryptography.Asymmetric.RSA2048.#ctor
-  isSpec: "True"
-  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA2048.RSA2048
-  nameWithType: RSA2048.RSA2048
-- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA4096
-  name: RSA4096
-  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA4096.html
-  commentId: T:GlitchedPolygons.Services.Cryptography.Asymmetric.RSA4096
-  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA4096
-  nameWithType: RSA4096
-- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA4096.#ctor
-  name: RSA4096()
-  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA4096.html#GlitchedPolygons_Services_Cryptography_Asymmetric_RSA4096__ctor
-  commentId: M:GlitchedPolygons.Services.Cryptography.Asymmetric.RSA4096.#ctor
-  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA4096.RSA4096()
-  nameWithType: RSA4096.RSA4096()
-- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA4096.#ctor*
-  name: RSA4096
-  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA4096.html#GlitchedPolygons_Services_Cryptography_Asymmetric_RSA4096__ctor_
-  commentId: Overload:GlitchedPolygons.Services.Cryptography.Asymmetric.RSA4096.#ctor
-  isSpec: "True"
-  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA4096.RSA4096
-  nameWithType: RSA4096.RSA4096
-- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA512
-  name: RSA512
-  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA512.html
-  commentId: T:GlitchedPolygons.Services.Cryptography.Asymmetric.RSA512
-  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA512
-  nameWithType: RSA512
-- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA512.#ctor
-  name: RSA512()
-  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA512.html#GlitchedPolygons_Services_Cryptography_Asymmetric_RSA512__ctor
-  commentId: M:GlitchedPolygons.Services.Cryptography.Asymmetric.RSA512.#ctor
-  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA512.RSA512()
-  nameWithType: RSA512.RSA512()
-- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA512.#ctor*
-  name: RSA512
-  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSA512.html#GlitchedPolygons_Services_Cryptography_Asymmetric_RSA512__ctor_
-  commentId: Overload:GlitchedPolygons.Services.Cryptography.Asymmetric.RSA512.#ctor
-  isSpec: "True"
-  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSA512.RSA512
-  nameWithType: RSA512.RSA512
 - uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize
   name: RSAKeySize
   href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.html
   commentId: T:GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize
   fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize
   nameWithType: RSAKeySize
-- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.#ctor(System.Int32)
-  name: RSAKeySize(Int32)
-  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.html#GlitchedPolygons_Services_Cryptography_Asymmetric_RSAKeySize__ctor_System_Int32_
-  commentId: M:GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.#ctor(System.Int32)
-  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.RSAKeySize(System.Int32)
-  nameWithType: RSAKeySize.RSAKeySize(Int32)
-- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.#ctor*
-  name: RSAKeySize
-  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.html#GlitchedPolygons_Services_Cryptography_Asymmetric_RSAKeySize__ctor_
-  commentId: Overload:GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.#ctor
-  isSpec: "True"
-  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.RSAKeySize
-  nameWithType: RSAKeySize.RSAKeySize
-- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.op_Implicit(GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize)~System.Int32
-  name: Implicit(RSAKeySize to Int32)
-  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.html#GlitchedPolygons_Services_Cryptography_Asymmetric_RSAKeySize_op_Implicit_GlitchedPolygons_Services_Cryptography_Asymmetric_RSAKeySize__System_Int32
-  commentId: M:GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.op_Implicit(GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize)~System.Int32
-  name.vb: Widening(RSAKeySize to Int32)
-  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.Implicit(GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize to System.Int32)
-  fullName.vb: GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.Widening(GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize to System.Int32)
-  nameWithType: RSAKeySize.Implicit(RSAKeySize to Int32)
-  nameWithType.vb: RSAKeySize.Widening(RSAKeySize to Int32)
-- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.op_Implicit*
-  name: Implicit
-  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.html#GlitchedPolygons_Services_Cryptography_Asymmetric_RSAKeySize_op_Implicit_
-  commentId: Overload:GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.op_Implicit
-  isSpec: "True"
-  name.vb: Widening
-  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.Implicit
-  fullName.vb: GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.Widening
-  nameWithType: RSAKeySize.Implicit
-  nameWithType.vb: RSAKeySize.Widening
+- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.RSA1024
+  name: RSA1024
+  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.html#GlitchedPolygons_Services_Cryptography_Asymmetric_RSAKeySize_RSA1024
+  commentId: F:GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.RSA1024
+  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.RSA1024
+  nameWithType: RSAKeySize.RSA1024
+- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.RSA2048
+  name: RSA2048
+  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.html#GlitchedPolygons_Services_Cryptography_Asymmetric_RSAKeySize_RSA2048
+  commentId: F:GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.RSA2048
+  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.RSA2048
+  nameWithType: RSAKeySize.RSA2048
+- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.RSA4096
+  name: RSA4096
+  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.html#GlitchedPolygons_Services_Cryptography_Asymmetric_RSAKeySize_RSA4096
+  commentId: F:GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.RSA4096
+  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.RSA4096
+  nameWithType: RSAKeySize.RSA4096
+- uid: GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.RSA512
+  name: RSA512
+  href: api/GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.html#GlitchedPolygons_Services_Cryptography_Asymmetric_RSAKeySize_RSA512
+  commentId: F:GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.RSA512
+  fullName: GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize.RSA512
+  nameWithType: RSAKeySize.RSA512

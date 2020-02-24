@@ -86,47 +86,23 @@
     <h5>Implements</h5>
     <div><a class="xref" href="GlitchedPolygons.Services.Cryptography.Asymmetric.IAsymmetricKeygenRSA.html">IAsymmetricKeygenRSA</a></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GlitchedPolygons.Services.Cryptography.Asymmetric.html">GlitchedPolygons.Services.Cryptography.Asymmetric</a></h6>
   <h6><strong>Assembly</strong>: GlitchedPolygons.Services.Cryptography.Asymmetric.dll</h6>
   <h5 id="GlitchedPolygons_Services_Cryptography_Asymmetric_AsymmetricKeygenRSA_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class AsymmetricKeygenRSA : IAsymmetricKeygenRSA</code></pre>
+    <pre><code class="lang-csharp hljs">public class AsymmetricKeygenRSA : object, IAsymmetricKeygenRSA</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GlitchedPolygons/Cryptography.Asymmetric/new/master/apiSpec/new?filename=GlitchedPolygons_Services_Cryptography_Asymmetric_AsymmetricKeygenRSA__ctor_System_Action_System_String__.md&amp;value=---%0Auid%3A%20GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.%23ctor(System.Action%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GlitchedPolygons/Cryptography.Asymmetric/new/master/apiSpec/new?filename=GlitchedPolygons_Services_Cryptography_Asymmetric_AsymmetricKeygenRSA__ctor_Action_System_String__.md&amp;value=---%0Auid%3A%20GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.%23ctor(Action%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/GlitchedPolygons/Cryptography.Asymmetric/blob/master/src/AsymmetricKeygenRSA.cs/#L41">View Source</a>
   </span>
   <a id="GlitchedPolygons_Services_Cryptography_Asymmetric_AsymmetricKeygenRSA__ctor_" data-uid="GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.#ctor*"></a>
-  <h4 id="GlitchedPolygons_Services_Cryptography_Asymmetric_AsymmetricKeygenRSA__ctor_System_Action_System_String__" data-uid="GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.#ctor(System.Action{System.String})">AsymmetricKeygenRSA(Action&lt;String&gt;)</h4>
+  <h4 id="GlitchedPolygons_Services_Cryptography_Asymmetric_AsymmetricKeygenRSA__ctor_Action_System_String__" data-uid="GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.#ctor(Action{System.String})">AsymmetricKeygenRSA(Action&lt;String&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates a new asymmetric RSA key generator.</p>
 <param name="errorCallback">Optional callback for when an exception is thrown during key generation (could be fed back to your own personal error logging provider for example). The passed <code>string</code> parameter is the error message, including the full exception&apos;s content...
 </div>
@@ -146,7 +122,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">errorCallback</span></td>
         <td></td>
       </tr>
@@ -163,14 +139,14 @@
   </span>
   <a id="GlitchedPolygons_Services_Cryptography_Asymmetric_AsymmetricKeygenRSA_GenerateKeyPair_" data-uid="GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.GenerateKeyPair*"></a>
   <h4 id="GlitchedPolygons_Services_Cryptography_Asymmetric_AsymmetricKeygenRSA_GenerateKeyPair_GlitchedPolygons_Services_Cryptography_Asymmetric_RSAKeySize_" data-uid="GlitchedPolygons.Services.Cryptography.Asymmetric.AsymmetricKeygenRSA.GenerateKeyPair(GlitchedPolygons.Services.Cryptography.Asymmetric.RSAKeySize)">GenerateKeyPair(RSAKeySize)</h4>
-  <div class="markdown level1 summary"><p>Generates a new RSA key pair <span class="xref">System.Tuple</span> using the provided RSA key size parameter <code data-dev-comment-type="paramref" class="paramref">keySize</code>.<p> </p>
-Returns the RSA key pair <span class="xref">System.Tuple</span>, where the first item is the public key and the second is the private key.<p> </p>
+  <div class="markdown level1 summary"><p>Generates a new RSA key pair <see cref="!:Tuple"></see> using the provided RSA key size parameter <code data-dev-comment-type="paramref" class="paramref">keySize</code>.<p> </p>
+Returns the RSA key pair <see cref="!:Tuple"></see>, where the first item is the public key and the second is the private key.<p> </p>
 If generation failed for some reason, <code>null</code> is returned.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Tuple&lt;string, string&gt;&gt; GenerateKeyPair(RSAKeySize keySize)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;ValueTuple&lt;string, string&gt;&gt; GenerateKeyPair(RSAKeySize keySize)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -200,8 +176,8 @@ If generation failed for some reason, <code>null</code> is returned.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Tuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
-        <td><p>The key pair <span class="xref">System.Tuple</span>, where the first item is the public RSA key and the second one is the private key (both PEM-formatted).</p>
+        <td><span class="xref">Task</span>&lt;<span class="xref">ValueTuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><p>The key pair <see cref="!:Tuple"></see>, where the first item is the public RSA key and the second one is the private key (both PEM-formatted). If key generation failed, both tuple items are <code>null</code>.</p>
 </td>
       </tr>
     </tbody>

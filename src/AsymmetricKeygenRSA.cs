@@ -57,7 +57,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
                 try
                 {
                     var keygen = new RsaKeyPairGenerator();
-                    keygen.Init(new KeyGenerationParameters(new SecureRandom(), keySize));
+                    keygen.Init(new KeyGenerationParameters(new SecureRandom(), (int)keySize));
                     AsymmetricCipherKeyPair keyPair = keygen.GenerateKeyPair();
                     return (keyPair.Public.ToPemString(), keyPair.Private.ToPemString());
                 }
