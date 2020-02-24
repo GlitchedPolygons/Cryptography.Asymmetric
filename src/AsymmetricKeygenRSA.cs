@@ -1,5 +1,5 @@
 /*
-   Copyright 2019 Raphael Beck
+   Copyright 2020 Raphael Beck
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -49,8 +49,8 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
         /// If generation failed for some reason, <c>null</c> is returned.
         /// </summary>
         /// <param name="keySize">The desired RSA key size. Can be 512-bit, 1024-bit, 2048-bit or 4096-bit.</param>
-        /// <returns>The key pair <see cref="Tuple"/>, where the first item is the public RSA key and the second one is the private key (both PEM-formatted).</returns>
-        public Task<Tuple<string, string>> GenerateKeyPair(RSAKeySize keySize) 
+        /// <returns>The key pair <see cref="Tuple"/>, where the first item is the public RSA key and the second one is the private key (both PEM-formatted). If key generation failed, both tuple items are <c>null</c>.</returns>
+        public Task<ValueTuple<string, string>> GenerateKeyPair(RSAKeySize keySize) 
         {
             return Task.Run(() =>
             {
@@ -59,12 +59,12 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
                     var keygen = new RsaKeyPairGenerator();
                     keygen.Init(new KeyGenerationParameters(new SecureRandom(), keySize));
                     AsymmetricCipherKeyPair keyPair = keygen.GenerateKeyPair();
-                    return new Tuple<string, string>(keyPair.Public.ToPemString(), keyPair.Private.ToPemString());
+                    return (keyPair.Public.ToPemString(), keyPair.Private.ToPemString());
                 }
                 catch (Exception e)
                 {
                     errorCallback?.Invoke($"{nameof(AsymmetricKeygenRSA)}::{nameof(GenerateKeyPair)}: RSA key pair generation failed. Thrown exception: {e.ToString()}");
-                    return null;
+                    return (null, null);
                 }
             });
         }

@@ -1,5 +1,5 @@
 /*
-   Copyright 2019 Raphael Beck
+   Copyright 2020 Raphael Beck
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -39,7 +39,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
         
         private readonly byte[] data = new byte[] { 1, 2, 3, 64, 128, 1, 3, 3, 7, 6, 9, 4, 2, 0, 1, 9, 9, 6, 58, 67, 55, 100, 96 };
 
-        private Task<Tuple<string,string>> FreshKeys(int keySize)
+        private Task<ValueTuple<string,string>> FreshKeys(int keySize)
         {
             var rsaKeySize = KEY_SIZE_1024;
             switch (keySize)
@@ -64,7 +64,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
         [InlineData(4096)]
         public async Task AsymmetricCryptography_EncryptString_DecryptString_IdenticalAfterwards(int keySize)
         {
-            Tuple<string, string> keys = await FreshKeys(keySize);
+            var keys = await FreshKeys(keySize);
             string encr = crypto.Encrypt(text, keys.Item1);
             string decr = crypto.Decrypt(encr, keys.Item2);
             Assert.Equal(decr, text);
@@ -93,7 +93,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
         [InlineData(4096)]
         public async Task AsymmetricCryptography_EncryptStringUsingPrivateKey_DecryptString_IdenticalAfterwards_ShouldAlsoWork(int keySize)
         {
-            Tuple<string, string> keys = await FreshKeys(keySize);
+            var keys = await FreshKeys(keySize);
             string encr = crypto.Encrypt(text, keys.Item2);
             string decr = crypto.Decrypt(encr, keys.Item2);
             Assert.Equal(decr, text);
@@ -149,7 +149,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
         [InlineData(4096)]
         public async Task AsymmetricCryptography_EncryptString_DecryptStringUsingPublicKey_ReturnsNull(int keySize)
         {
-            Tuple<string, string> keys = await FreshKeys(keySize);
+            var keys = await FreshKeys(keySize);
             string encr = crypto.Encrypt(text, keys.Item1);
             string decr = crypto.Decrypt(encr, keys.Item1);
             Assert.NotEqual(text, decr);
@@ -219,7 +219,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
         [InlineData(4096)]
         public async Task AsymmetricCryptography_SignStringUsingPrivateKey_VerifySignatureUsingPublicKey_ReturnsTrue_Succeeds(int keySize)
         {
-            Tuple<string, string> keys = await FreshKeys(keySize);
+            var keys = await FreshKeys(keySize);
             string sig = crypto.Sign(text, keys.Item2);
             bool verified = crypto.Verify(text, sig, keys.Item1);
             Assert.True(verified);
@@ -254,7 +254,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
         [InlineData(4096)]
         public async Task AsymmetricCryptography_SignBytes_VerifySignature_ReturnsTrue_Succeeds(int keySize)
         {
-            Tuple<string, string> keys = await FreshKeys(keySize);
+            var keys = await FreshKeys(keySize);
             byte[] sig = crypto.Sign(data, keys.Item2);
             bool verified = crypto.Verify(data, sig, keys.Item1);
             Assert.True(verified);
@@ -276,7 +276,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
         [InlineData(4096)]
         public async Task AsymmetricCryptography_SignBytesUsingPublicKey_ReturnsNull(int keySize)
         {
-            Tuple<string, string> keys = await FreshKeys(keySize);
+            var keys = await FreshKeys(keySize);
             byte[] sig = crypto.Sign(data, keys.Item1);
             Assert.Null(sig);
         }
@@ -288,7 +288,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
         [InlineData(4096)]
         public async Task AsymmetricCryptography_SignString_VerifyUsingPrivateKey_ReturnsFalse(int keySize)
         {
-            Tuple<string, string> keys = await FreshKeys(keySize);
+            var keys = await FreshKeys(keySize);
             string sig = crypto.Sign(text, keys.Item2);
             bool verified = crypto.Verify(text, sig, keys.Item2);
             Assert.False(verified);

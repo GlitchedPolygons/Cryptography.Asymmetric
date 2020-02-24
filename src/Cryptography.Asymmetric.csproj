@@ -1,5 +1,5 @@
 ﻿<!--
-   Copyright 2019 Raphael Beck
+   Copyright 2020 Raphael Beck
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
+        <TargetFramework>netstandard2.1</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Title>GlitchedPolygons.Services.Cryptography.Asymmetric</Title>
         <AssemblyName>GlitchedPolygons.Services.Cryptography.Asymmetric</AssemblyName>
@@ -27,12 +27,13 @@
         <Description>IoC friendly C# .netstandard2.0 service interface for asymmetric cryptographic operations.</Description>
         <Authors>Glitched Polygons</Authors>
         <Company>Glitched Polygons</Company>
-        <PackageVersion>1.0.1</PackageVersion>
+        <PackageVersion>2.0.0</PackageVersion>
         <PackageProjectUrl>https://github.com/GlitchedPolygons/Cryptography.Asymmetric</PackageProjectUrl>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <RepositoryUrl>https://github.com/GlitchedPolygons/Cryptography.Asymmetric</RepositoryUrl>
         <PackageTags>c# crypto cryptography lib service interface rsa key keygen encrypt decrypt sign verify string bytes data</PackageTags>
+        <LangVersion>8</LangVersion>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
@@ -40,9 +41,10 @@
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
         <DocumentationFile>bin\Debug\netstandard2.0\GlitchedPolygons.Services.Cryptography.Asymmetric.xml</DocumentationFile>
+        <DebugType>full</DebugType>
     </PropertyGroup>
     <ItemGroup>
-      <PackageReference Include="Portable.BouncyCastle" Version="1.8.5" />
+      <PackageReference Include="Portable.BouncyCastle" Version="1.8.5.2" />
     </ItemGroup>
 
 
@@ -51,7 +53,7 @@
 </PropertyGroup>
 
 <ItemGroup>
-  <None Include="icon.png" Pack="true" PackagePath="\"/>
+  <None Include="icon.png" Pack="true" PackagePath="\" />
 </ItemGroup>
 
 </Project>

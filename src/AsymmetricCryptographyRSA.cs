@@ -1,5 +1,5 @@
 /*
-   Copyright 2019 Raphael Beck
+   Copyright 2020 Raphael Beck
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -67,7 +67,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
             {
                 return Convert.ToBase64String(Encrypt(Encoding.UTF8.GetBytes(text), publicKeyPem));
             }
-            catch (Exception)
+            catch
             {
                 return null;
             }
@@ -89,7 +89,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
             {
                 return Encoding.UTF8.GetString(Decrypt(Convert.FromBase64String(encryptedText), privateKeyPem));
             }
-            catch (Exception)
+            catch
             {
                 return null;
             }
@@ -116,7 +116,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
 
                 return ProcessData(data, key, true);
             }
-            catch (Exception)
+            catch
             {
                 return null;
             }
@@ -140,7 +140,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
             {
                 return ProcessData(encryptedData, PemStringToKeyPair(privateKeyPem).Private, false);
             }
-            catch (Exception)
+            catch
             {
                 return null;
             }
@@ -173,7 +173,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
                 byte[] signature = Sign(Encoding.UTF8.GetBytes(data), privateKeyPem);
                 return Convert.ToBase64String(signature);
             }
-            catch (Exception)
+            catch
             {
                 return null;
             }
@@ -197,7 +197,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
                 byte[] signatureBytes = Convert.FromBase64String(signature);
                 return Verify(Encoding.UTF8.GetBytes(data), signatureBytes, publicKeyPem);
             }
-            catch (Exception)
+            catch
             {
                 return false;
             }
@@ -228,7 +228,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
                 
                 return sig.GenerateSignature();
             }
-            catch (Exception)
+            catch
             {
                 return null;
             }
@@ -256,7 +256,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
                 
                 return signer.VerifySignature(signature);
             }
-            catch (Exception)
+            catch
             {
                 return false;
             }
@@ -285,7 +285,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
                 var pemReader = new PemReader(stringReader);
                 return pemReader.ReadObject() as AsymmetricCipherKeyPair;
             }
-            catch (Exception)
+            catch
             {
                 return null;
             }
@@ -313,7 +313,7 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric
                 var pemReader = new PemReader(stringReader);
                 return pemReader.ReadObject() as RsaKeyParameters;
             }
-            catch (Exception)
+            catch
             {
                 return null;
             }

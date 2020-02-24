@@ -12,7 +12,7 @@
 
 #### Namespace:  `GlitchedPolygons.Services.Cryptography.Asymmetric`
 
-This is a simple, easy-to-use crypto library for C# ([netstandard2.0](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md)).
+This is a simple, easy-to-use crypto library for C# 8.0 ([netstandard2.1](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.1.md)).
 
 It makes use of the portable [BouncyCastle](https://www.bouncycastle.org/) NuGet package to provide a reliable cross-platform cryptography interface.
 
@@ -23,7 +23,7 @@ RSA keys can be generated in variable key sizes and exported into comfortable PE
 For more information, check out the [API Documentation](https://glitchedpolygons.github.io/Cryptography.Asymmetric/api/GlitchedPolygons.Services.Cryptography.Asymmetric.html).
 
 **Technology used:**
-* C# ([netstandard2.0](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md))
+* C# ([netstandard2.1](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.1.md))
 * [Portable.BouncyCastle](https://github.com/onovotny/bc-csharp)
 
 ---
