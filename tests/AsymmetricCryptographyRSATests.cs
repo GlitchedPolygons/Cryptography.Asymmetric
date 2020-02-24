@@ -339,5 +339,23 @@ namespace GlitchedPolygons.Services.Cryptography.Asymmetric.Tests
             Assert.NotEmpty(sig);
             Assert.True(crypto.Verify(data, sig, publicTestKeyPem1));
         }
+
+        [Theory]
+        [InlineData(null)]
+        [InlineData(new byte[0])]
+        public void AsymmetricCryptography_VerifyNullOrEmptyBytes_ReturnsFalse(byte[] d)
+        {
+            byte[] sig = crypto.Sign(data, privateKeyPem1);
+            Assert.False(crypto.Verify(d, sig, publicTestKeyPem1));
+        }
+        
+        [Theory]
+        [InlineData("")]
+        [InlineData(null)]
+        public void AsymmetricCryptography_VerifyNullOrEmptyString_ReturnsFalse(string d)
+        {
+            string sig = crypto.Sign("test string", privateKeyPem1);
+            Assert.False(crypto.Verify(d, sig, publicTestKeyPem1));
+        }
     }
 }
